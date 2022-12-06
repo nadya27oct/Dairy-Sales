@@ -6,24 +6,24 @@ Predict an inventory order system for dairy products.
 
 We have daily sales data for *81 products* from January 2021 to mid October 2022.<br>
 
-**Size Variable** 
+**Size Variable** <br> 
 Analysis on size variable showed that most sold sizes are 32 oz and 64 oz. But product sizes that sell in small volumes bring in a higher per unit margin.
 
-**Price** 
+**Price** <br>
 Products are priced ranging from $0.49 to $12.99. This is expected as the grocery store sells regular milk to expensive cheese.
 No clear relationship between price and sales as products priced at $6.99 still contributes a heavily to unit sales.
 
-**Outliers**
+**Outliers** <br>
 Two main outliers. One product - upc 4190007663 - costs $14 on 1 day. The neighboring days for this product costs at about $1.50.
 Upc 1570010320 recorded 32 units of sales on June 21st, 2021, when the same product has significantly low sales for neighboring days. <br>
 I removed the outliers for some visualizations. But without the business context, I did not remove outliers in final model.
 
-**Time Series Patterns**
+**Time Series Patterns** <br>
 There are some seasonaly patterns within a year in daily sales, especially around January to early June.<br>
 Sales volume is significantly high in summer months.<br>
 No clear trends or seasonality in sales plots against month, week of day, day of month.<br>
 
-**Product Level Metrics**
+**Product Level Metrics** <br>
 We computed different metrics at the product level to get an understanding of the data. About half of products have less than 100 units of data across all weeks.<br>
 Some products have very sparse weeks of sales, selling in Summer 2021 and no record until Summer 2022.<br>
 These factors were considered when picking which products are eligible for modeling. We did not want to include products with low sales as they will give us a higher forecast error.<br>
